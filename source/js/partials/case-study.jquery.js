@@ -1,8 +1,11 @@
 $(document).ready(function() {
 
-	var element  = $( '.casestudy' );
+	var element  = $( '.casestudy' ),
+	    savePosition;
 
 	$( '.block' ).click(function() {
+
+		var savePosition = $(window).top;
 
 		var $this       = $( this ),
 		    documentPos = $this.position().top,
@@ -16,7 +19,7 @@ $(document).ready(function() {
 
 
 		// Animate scroll to div
-		$("html, body").animate( { scrollTop: documentPos + -20 } ); 
+		$("html, body").animate( { scrollTop: documentPos + -40 } ); 
 
 
 		var getTitle   = $('.block_data .title', this).text(),
@@ -39,6 +42,8 @@ $(document).ready(function() {
 			// .removeAttr( 'style' )
 			// .css('background-color', getColor)
 			.fadeIn();
+
+			console.log( savePosition );
 
 	});
 
@@ -68,14 +73,18 @@ $(document).ready(function() {
 
 	// Close button
 	$( '.close, .overlay' ).click(function(e) {
+
 		$( element )
 			.fadeOut(310)
 			.removeClass('active');
 		$( '.block' ).removeClass('active');
 		$( '.overlay' ).fadeOut();
+
+		$("html,body").animate( { scrollTop: element.position().top } );
+
 		e.preventDefault();
 
-		console.log( 'Closed' );
+		console.log( savePosition );
 	});
 
 });

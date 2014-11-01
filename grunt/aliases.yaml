@@ -2,6 +2,7 @@ default:
 - 'jshint'
 - 'concat'
 - 'sass:dev'
+- 'autoprefixer'
 - 'connect'
 - 'watch'
 
@@ -9,4 +10,5 @@ build:
 - 'jshint'
 - 'concat'
 - 'sass:dist'
+- 'autoprefixer'
 - 'shell:jekyllBuild'

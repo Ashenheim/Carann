@@ -12,7 +12,7 @@ module.exports = {
 	sass: {
 		files: [ 'source/sass/**/*.sass',
 					'source/sass/**/*.scss' ],
-		tasks: [ 'sass:dev', 'shell:jekyllBuild' ]
+		tasks: [ 'sass:dev', 'autoprefixer', 'shell:jekyllBuild' ]
 	},
 	scripts: {
 		files: [ 'source/js/scripts.js', 'source/js/**/*.js' ],
