@@ -18,10 +18,11 @@
 		
 		h1
 			font-size: 1.2em
+			margin: 0
 			color: $white
 			transform-origin: 0% 100%
 			text-shadow: 0 1px 1px rgba( $black, .6 )
-			transform: translateX(-10%)
+			transform: translateX(-15%)
 			+transition( all 500ms ease-in-out )
 			+ellipsis
 
@@ -30,15 +31,16 @@
 	img
 		display: block
 		width: 100%
-		opacity: .95
+		// opacity: .95
 		+transition( all $easing )
+		+filter( sepia(80%) )
 
 
 	&:hover
 		opacity: 1
 		cursor: pointer
 		z-index: 8
-		box-shadow: 0 1px 8px rgba( $black, .5 )
+		// box-shadow: 0 1px 8px rgba( $black, .5 )
 
 		.block_title
 			opacity: 1
@@ -52,3 +54,4 @@
 		img
 			transform: scale(1.25) rotate(-4deg)
 			opacity: 1
+			+filter( sepia(0%) )

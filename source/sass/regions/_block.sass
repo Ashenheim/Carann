@@ -3,6 +3,12 @@
 	==================================== */
 
 
+$gutter : 2px
+
+
+
+
+
 .block
 	width: 100%
 	position: relative
@@ -20,7 +26,7 @@
 
 	.block_inner
 		+position(absolute, 0px)
-		margin: 5px
+		margin: $gutter
 
 
 	.block_data
@@ -60,6 +66,13 @@
 
 	+below( $bp-medium )
 		width: 50%
+
+
+
+.block_container
+	@extend %clearfix
+	margin-right: -$gutter
+	margin-left:  -$gutter
 
 
 

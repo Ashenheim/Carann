@@ -4,7 +4,7 @@ module.exports = {
 		files: [ 'index.html',
 					'_includes/*',
 					'_portfolio/*',
-					'_config.yml',
+					'_config-dev.yml',
 					'images/**/*',
 					'assets/media/*.*' ],
 		tasks: [ 'shell:jekyllBuild' ]

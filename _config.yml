@@ -2,7 +2,7 @@
 
 name: DOCType
 
-markdown: kramdown
+markdown: redcarpet
 permalink: pretty
 
 url: /my-portfolio
