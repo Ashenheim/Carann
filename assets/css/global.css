@@ -630,9 +630,6 @@ textarea {
   cursor: pointer;
   z-index: 8;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
-  -webkit-transform: scale(0.98);
-      -ms-transform: scale(0.98);
-          transform: scale(0.98);
 }
 .block_entry:hover .block_title, .block.active .block_title, .active.block--full .block_title, .active.block--half .block_title, .active.block--quarter .block_title {
   opacity: 1;
