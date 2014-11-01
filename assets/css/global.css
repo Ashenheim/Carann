@@ -542,8 +542,15 @@ textarea {
   padding-bottom: 100%;
 }
 
+.block--full .block_title h1 {
+  font-size: 3em !important;
+}
+
 .block--half {
   width: 50%;
+}
+.block--half .block_title h1 {
+  font-size: 2em !important;
 }
 @media only screen and (max-width: 780px) {
   .block--half {
