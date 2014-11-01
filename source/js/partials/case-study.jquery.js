@@ -80,7 +80,7 @@ $(document).ready(function() {
 		$( '.block' ).removeClass('active');
 		$( '.overlay' ).fadeOut();
 
-		$("html,body").animate( { scrollTop: element.position().top } );
+		$("html,body").animate( { scrollTop: $('.block_container').position().top } );
 
 		e.preventDefault();
 
