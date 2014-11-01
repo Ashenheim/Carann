@@ -1,0 +1,728 @@
+/* Variables
+ * ==================================== */
+/* Imports
+ * ==================================== */
+/* ====================================
+ * Global classes
+ * ==================================== */
+.disable-hover {
+  pointer-events: none;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/* ====================================
+ * normalize.css v3.0.1 | MIT License | git.io/normalize
+ * customized by sebastian ekstrom (zerosixthree.se)
+ * ==================================== */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block;
+}
+
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden], template {
+  display: none;
+}
+
+a {
+  background: transparent;
+}
+a:active, a:hover {
+  outline: 0;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+figure {
+  margin: 1em 40px;
+}
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+pre {
+  overflow: auto;
+}
+
+code, kbd, pre, samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+button, input, optgroup, select, textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+button {
+  overflow: visible;
+  text-transform: none;
+}
+
+select {
+  text-transform: none;
+}
+
+button, html input[type="button"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled], html input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input {
+  line-height: normal;
+}
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+}
+
+optgroup {
+  font-weight: bold;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+/* Bourbon 4.0.2
+ * http://bourbon.io
+ * Copyright 2011-2014 thoughtbot, inc.
+ * MIT License */
+/* ====================================
+ * Mixins and functions
+ * ==================================== */
+/* Media queries
+ * ==================================== */
+/* Mixins and functions
+ * ==================================== */
+/* Extends
+ * ==================================== */
+.visually-hidden {
+  position: absolute !important;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.container, .page-wrap, .media-block,
+.media-block--body {
+  *zoom: 1;
+}
+.container:before, .page-wrap:before, .media-block:before,
+.media-block--body:before {
+  content: " ";
+  display: table;
+}
+.container:after, .page-wrap:after, .media-block:after,
+.media-block--body:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.fullscreen .fullscreen_inner {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Settings
+ * ==================================== */
+/* Functions
+ * ==================================== */
+/* Grid system
+ * ==================================== */
+/* ====================================
+ * General site styling
+ * ==================================== */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  background: #f2f2f2 url(../media/body_bg.svg) bottom center no-repeat;
+  background-size: 100%;
+}
+
+::-moz-selection {
+  background: #593A24;
+  color: #ffffff;
+}
+
+::selection {
+  background: #593A24;
+  color: #ffffff;
+}
+
+.container, .page-wrap {
+  max-width: 960px;
+  width: 90%;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 780px) {
+  .container, .page-wrap {
+    width: 96%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .container, .page-wrap {
+    width: 96%;
+  }
+}
+
+.page-wrap {
+  padding-top: 30px;
+  padding-bottom: 50%;
+}
+
+/* ====================================
+ * Site typography.
+ * ==================================== */
+body, html {
+  font-size: 16px;
+  font-size: 1rem;
+  color: #333;
+  font-family: "Titillium Web", sans-serif;
+  font-smoothing: antialiased;
+}
+
+/* Headings
+ * added .alpha, .beta, .gamma, .delta, .epsilon and .zeta for OOCSS reasons.
+ * ==================================== */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  margin-top: 8px;
+  margin-bottom: 9px;
+  padding: 0;
+}
+
+h1, .alpha {
+  font-size: 2.2em;
+}
+
+h2, .beta {
+  font-size: 1.8em;
+}
+
+h3, .gamma {
+  font-size: 1.6em;
+}
+
+h4, .delta {
+  font-size: 1.4em;
+}
+
+h5, .epsilon {
+  font-size: 1.2em;
+}
+
+h6, .zeta {
+  font-size: 1.1em;
+}
+
+/* Paragraphs, links and combined
+ * ==================================== */
+p {
+  line-height: 1.4em;
+  margin-top: 8px;
+  margin-bottom: 9px;
+}
+
+a {
+  color: #593A24;
+  font-weight: 700;
+  text-decoration: none;
+}
+a:hover, a:active, a:focus {
+  color: #40200a;
+}
+
+p a {
+  border-bottom: 2px solid transparent;
+}
+p a:hover, p a:active, p a:focus {
+  border-color: #40200a;
+}
+
+/* Separate elements
+ * ==================================== */
+hr {
+  border: none;
+  border-bottom: 1px solid #DDDDDD;
+  width: 100%;
+  margin-bottom: 1.4em;
+}
+
+code {
+  background: #eee;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  display: block;
+}
+
+/* ====================================
+ * List styling (ul, ol, dl)
+ * ==================================== */
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+ul li, ol li {
+  margin-left: 15px;
+}
+
+ul.unstyled li,
+ol.unstyled li {
+  list-style: none;
+  margin-left: 0;
+}
+
+/*	====================================
+ * Media
+ * ==================================== */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p img {
+  border: 1px solid #DDDDDD;
+  padding: 3px;
+}
+
+svg {
+  width: 100%;
+  height: auto;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* ====================================
+ * The media block
+ * Courtesy of Nicole Sullivan
+ * http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+ *
+ * Usage:
+ * <div class="media-block">
+ *   <a href="http://some-url-com" class="media-block--image-container">
+ *     <img src="http://placehold.it/50x50" alt="">
+ *   </a>
+ *   <div class="media-block--body">
+ *     <h2>I'm a heading inside a media block</h2>
+ *     <p>And some text inside it as well</p>
+ *   </div>
+ * </div>
+ * ==================================== */
+.media-block {
+  margin: 0.4em;
+}
+
+.media-block--image-container {
+  float: left;
+  margin-right: 0.4em;
+}
+.media-block--image-container img {
+  display: block;
+}
+
+/* ====================================
+ * Form styling
+ * ==================================== */
+input[type=text],
+input[type=search],
+input[type=url],
+input[type=email],
+input[type=number],
+textarea {
+  width: 100%;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* ====================================
+ * Header
+ * ==================================== */
+.logo {
+  font-size: 0;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 25%;
+  display: block;
+}
+.logo:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+}
+.logo .inner {
+  background: red;
+  display: block;
+  position: relative;
+  bottom: 0px;
+}
+
+/* ====================================
+ * Layout styles
+ * ==================================== */
+.block, .block--full, .block--half, .block--quarter {
+  width: 100%;
+  position: relative;
+  float: left;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+.block:after, .square:after, .block--full:after, .block--half:after, .block--quarter:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0;
+  padding-bottom: 50%;
+}
+.block .block_inner, .block--full .block_inner, .block--half .block_inner, .block--quarter .block_inner {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  margin: 5px;
+}
+.block .block_data, .block--full .block_data, .block--half .block_data, .block--quarter .block_data {
+  display: none;
+  visibility: hidden;
+}
+
+.square:after {
+  padding-bottom: 100%;
+}
+
+.block--half {
+  width: 50%;
+}
+@media only screen and (max-width: 780px) {
+  .block--half {
+    width: 100%;
+  }
+}
+
+.block--quarter {
+  width: 25%;
+}
+.block--quarter:after {
+  padding-bottom: 100% !important;
+}
+@media only screen and (max-width: 780px) {
+  .block--quarter {
+    width: 50%;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background: #000000;
+  opacity: 0.95;
+  z-index: 8;
+  display: none;
+}
+
+.block_entry {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: red;
+}
+.block_entry .text {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  padding: 5px 30px;
+  opacity: 0;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+.block_entry .text h1 {
+  font-size: 1.2em;
+  color: #ffffff;
+  transform-origin: 0% 100%;
+  text-shadow: 0 1px 1px #000000;
+  transform: translateX(-100%);
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+.block_entry img {
+  display: block;
+  width: 100%;
+  opacity: 0.8;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+.block_entry:hover, .block.active, .active.block--full, .active.block--half, .active.block--quarter {
+  opacity: 1;
+  cursor: pointer;
+  z-index: 8;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+}
+.block_entry:hover .text, .block.active .text, .active.block--full .text, .active.block--half .text, .active.block--quarter .text {
+  opacity: 1;
+}
+.block_entry:hover .text h1, .block.active .text h1, .active.block--full .text h1, .active.block--half .text h1, .active.block--quarter .text h1 {
+  transform: translateX(0);
+}
+.block_entry:hover .block-inner, .block.active .block-inner, .active.block--full .block-inner, .active.block--half .block-inner, .active.block--quarter .block-inner {
+  opacity: 0.2;
+}
+.block_entry:hover img, .block.active img, .active.block--full img, .active.block--half img, .active.block--quarter img {
+  transform: scale(1.2) rotate(-3deg);
+  opacity: 1;
+}
+
+/* ====================================
+ * Sections
+ * ==================================== */
+article.section {
+  background: #ffffff;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  -webkit-transition: 300ms ease-in-out border-color;
+  -moz-transition: 300ms ease-in-out border-color;
+  transition: 300ms ease-in-out border-color;
+}
+article.section + * {
+  margin-top: 2.4em;
+}
+article.section.focus {
+  border-left-color: #593A24;
+}
+article.section .inner {
+  margin-right: 20%;
+  margin-left: 20%;
+  padding: 2.4em 15px;
+}
+@media only screen and (max-width: 960px) {
+  article.section .inner {
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+}
+article.section header.heading {
+  margin-bottom: 2.4em;
+  border-bottom: 2px dashed #DDDDDD;
+}
+
+.casestudy {
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: auto;
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0px;
+  z-index: 10;
+  -webkit-transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  -moz-transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transform: scale(1, 0);
+  transform-origin: 50% 0%;
+}
+.casestudy .container, .casestudy .page-wrap {
+  padding: 2.4em 45px;
+  position: relative;
+}
+.casestudy a.close {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  display: block;
+  fill: #DDDDDD;
+  -webkit-transition: fill 300ms ease-in-out;
+  -moz-transition: fill 300ms ease-in-out;
+  transition: fill 300ms ease-in-out;
+}
+.casestudy a.close:hover {
+  fill: #D94343;
+}
+.casestudy.active {
+  transform: scale(1);
+}
+
+.fullscreen {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.9);
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3));
+  background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3));
+}
+.fullscreen .fullscreen_inner img {
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 1px 3px #000000;
+}
+
+/*# sourceMappingURL=global.css.map */

@@ -1,0 +1,69 @@
+/* ====================================
+	Layout styles
+	==================================== */
+
+
+.block
+	width: 100%
+	position: relative
+	float: left
+	+transition( all 300ms ease-in-out )
+
+
+	&:after
+		content: ""
+		display: block
+		width: 100%
+		height: 0
+		padding-bottom: 50%
+
+
+	.block_inner
+		+position(absolute, 0px)
+		margin: 5px
+
+
+	.block_data
+		display: none
+		visibility: hidden
+
+	&.active
+		@extend .block_entry:hover
+
+
+// Alternative sizes
+.square:after
+	@extend .block:after
+	padding-bottom: 100%
+
+
+.block--full
+	@extend .block
+
+.block--half
+	@extend .block
+	width: 50%
+
+	+below( $bp-medium )
+		width: 100%
+
+.block--quarter
+	@extend .block
+	width: 25%
+
+	&:after
+		padding-bottom: 100% !important
+
+	+below( $bp-medium )
+		width: 50%
+
+
+
+
+
+.overlay
+	+position(fixed, 0px 0px 0px 0px)
+	background: $black
+	opacity: .95
+	z-index: 8
+	display: none

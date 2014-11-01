@@ -1,0 +1,80 @@
+/* ====================================
+   Navigation
+   ==================================== */
+
+
+nav
+	+below($bp-medium)
+		width: 100%
+		background: $color-main
+		box-shadow: 0 1px 8px rgba( $black, .4 )
+		// +position(fixed, 0px null null 0px)
+
+
+
+ul[role="navigation"]
+	@extend .unstyled
+
+	+below($bp-medium)
+		display: none
+		overflow: auto
+
+		nav.active &
+			display: block
+
+	a
+		color: $white
+		padding: 15px
+		display: block
+		transition: 100ms ease-in-out all
+		background: $color-main
+
+		&:hover
+			color: lighten( $color-main, 60% )
+			background: $color-sec
+
+
+
+			
+
+.menu-button
+	cursor: pointer
+	width: 80px
+	height: auto
+	padding: 20px 0px 17px
+	text-align: center
+	fill: $white
+
+	+above($bp-medium)
+		display: none
+	
+	&:hover
+		fill: lighten( $color-main, 60% )
+		background: $color-sec
+
+
+	svg 
+		display: inline-block
+		width:  30px
+		height: 30px
+
+
+	.bar
+		transform-style: preserve-3D
+		+transition( $easing )
+
+		&.first
+			transform-origin: 29px 10px
+		&.third
+			transform-origin: 34px 18px
+	
+
+	nav.active &
+
+		.bar
+			&.first
+				transform: rotate(-45deg)
+			&.second
+				opacity: 0
+			&.third
+				transform: rotate(45deg)

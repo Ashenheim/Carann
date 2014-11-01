@@ -1,0 +1,82 @@
+/* Variables
+	==================================== */
+
+// Layout
+
+$site-width					: 960px
+// $site-width					: 600px
+$gutter						: 3 // %
+
+$base-spacing				: .4em
+$block-padding				: 2.4em
+
+$bp-huge						: 1140px
+$bp-large					: 960px
+$bp-medium					: 780px
+$bp-small					: 480px
+
+$easing						: 300ms ease-in-out
+
+// Colors
+
+$green						: #354F47
+$yellow						: #593A24
+$white						: #ffffff
+$red							: #D94343
+$grey							: #DDDDDD
+$black						: #000000
+
+$color-main					: $green
+$color-sec					: darken(saturate($color-main,10%),10%)
+$color-accent				: $yellow
+
+$color-text					: #333
+$color-link					: $yellow
+$color-link--hover		: darken(saturate($color-link, 30%),10%)
+
+$color-background			: hsl(0,0,95)
+$color-background--sec	: lighten(saturate($color-background,5%),15%)	
+
+$color-facebook			: #03539e
+$color-twitter				: #35ccff
+$color-linkedin			: #217bc1
+
+
+
+
+
+/* Imports
+	==================================== */
+	
+
+// Helpers
+
+@import 'helpers/global-classes'
+@import 'helpers/normalize'
+@import 'helpers/bourbon/bourbon'
+
+// Dependencies
+
+@import 'dependencies/mixins'
+@import 'dependencies/grid'
+
+// Foundation
+
+@import 'foundation/base'
+@import 'foundation/typography'
+
+// Components
+
+@import 'components/lists'
+@import 'components/media'
+@import 'components/blocks'
+@import 'components/forms'
+
+// Regions
+
+@import 'regions/header'
+@import 'regions/block'
+@import 'regions/block-entry'
+@import 'regions/section'
+@import 'regions/case-study'
+@import 'regions/fullscreen'

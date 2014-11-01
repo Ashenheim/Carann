@@ -1,0 +1,81 @@
+/* ====================================
+	 Mixins and functions
+	 ==================================== */
+
+
+/* 
+	 Media queries
+	 ==================================== */
+	 
+=bp-huge
+	@media only screen and (max-width: $bp-huge)
+		@content
+=bp-large
+	@media only screen and (max-width: $bp-large)
+		@content
+=bp-medium
+	@media only screen and (max-width: $bp-medium)
+		@content
+=bp-small
+	@media only screen and (max-width: $bp-small)
+		@content
+
+=above($bp)
+	@media only screen and (min-width: $bp)
+		@content
+
+=below($bp)
+	@media only screen and (max-width: $bp)
+		@content
+
+/* 
+	 Mixins and functions
+	 ==================================== */
+
+@function calculateRem($size)
+	$remSize: $size / 16px
+	@return #{$remSize}rem
+
+=font-size($size)
+	font-size: $size
+	font-size: calculateRem($size) 
+
+=background-cover
+	-webkit-background-size: cover
+	-moz-background-size: cover
+	-o-background-size: cover
+	background-size: cover
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale')
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')"
+
+/* 
+	 Extends
+	 ==================================== */
+
+%hide-text
+	text-indent: -99999px
+	direction: ltr
+
+%visually-hidden
+	position: absolute !important
+	overflow: hidden
+	width: 1px
+	height: 1px
+	padding: 0
+	border: 0
+	clip: rect(1px, 1px, 1px, 1px)
+
+%clearfix
+	*zoom: 1
+	&:before
+		content: " "
+		display: table
+	&:after
+		content: " "
+		display: table
+		clear: both  
+
+%vertical-align
+	position: relative
+	top: 50%
+	transform: translateY(-50%)

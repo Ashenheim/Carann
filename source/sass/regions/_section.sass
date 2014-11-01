@@ -1,0 +1,33 @@
+/* ====================================
+   Sections
+   ==================================== */
+
+
+article.section
+	background: $white
+	box-shadow: 0 0 3px rgba($black, .1)
+	border-left:  5px solid transparent
+	border-right: 5px solid transparent
+	+transition( $easing border-color )
+	
+
+	& + *
+		margin-top: $block-padding
+	
+	// JQuery, add hint when sidebar link is clicked
+	&.focus
+		border-left-color: $color-accent
+
+	.inner
+		margin-right: 20%
+		margin-left:  20%
+		padding: 2.4em 15px
+
+		+below($bp-large)
+			margin-right: 5%
+			margin-left:  5%
+
+
+	header.heading
+		margin-bottom: $block-padding
+		border-bottom: 2px dashed $grey

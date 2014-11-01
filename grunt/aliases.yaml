@@ -1,0 +1,12 @@
+default:
+- 'jshint'
+- 'concat'
+- 'sass:dev'
+- 'connect'
+- 'watch'
+
+build:
+- 'jshint'
+- 'concat'
+- 'sass:dist'
+- 'shell:jekyllBuild'

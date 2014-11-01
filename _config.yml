@@ -1,0 +1,20 @@
+# Build settings
+
+name: DOCType
+
+markdown: kramdown
+permalink: pretty
+
+url: /portfolio
+
+port: 4000
+
+exclude: [
+  'node_modules',
+  'sass_cache',
+  'Gruntfile.js',
+  'package.json',
+  'source']
+
+collections:
+- portfolio

@@ -1,0 +1,50 @@
+{% for posts in site.portfolio %}
+		
+<div class="[ block {% if posts.size == 'quarter' %}block--quarter{% elsif posts.size == 'half' %}block--half{% else %}block--full{% endif %} ] {% if posts.square == true %}square{% elsif posts.square == false %} {% else %} {% endif %}">
+	<div class="block_inner">
+
+		<div class="block_entry">
+		
+			{% if posts.text == true %}
+			{{ posts.content }}
+			{% elsif posts.youtube %}		
+			<iframe width="640" height="390" src="//www.youtube.com/embed/{{ posts.youtube }}?controls=0&showinfo=0&rel=0" controls="0" frameborder="0" allowfullscreen></iframe>
+			{% elsif posts.image %}
+			<img src="{{ site.url }}/images/{{ posts.image }}{% if posts.square == true %}-square{% endif %}.jpg" alt="{{ posts.image }}">
+			{% endif %}
+
+			
+			{% if posts.youtube %}
+			{% elsif posts.notitle == true %}
+			{% else %}
+			<div class="text">
+				<h1>
+					{{ posts.title }}
+				</h1>
+			</div>
+			{% endif %}
+
+		</div>
+		
+	</div>
+	
+	<!-- Data for Case -->
+	<div class="block_data">
+		<div class="wrapper">
+			
+			<span class="title">{{ posts.title }}</span>
+
+			<span class="content">
+				{{ posts.content }}
+			</span>
+
+			<span class="color">#{{ posts.color }}</span>
+
+		</div>
+	</div>
+	<!-- end -->
+
+
+</div>
+
+{% endfor %}

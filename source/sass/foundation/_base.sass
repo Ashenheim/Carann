@@ -1,0 +1,44 @@
+/* ====================================
+	General site styling
+	==================================== */
+
+
+html
+	box-sizing: border-box
+	
+	
+*, *:before, *:after
+	box-sizing: inherit
+
+body
+	font-size: 16px
+	-webkit-font-smoothing: antialiased
+	background: $color-background url(../media/body_bg.svg) bottom center no-repeat
+	background-size: 100%
+
+
+::-moz-selection
+	background: $color-accent
+	color: $white
+
+::selection
+	background: $color-accent
+	color: $white
+
+
+.container
+	@extend %clearfix
+	max-width: $site-width
+	// max-width: 500px
+	width: 90%
+	margin: 0 auto
+
+	+below($bp-medium)
+		width: 96%
+	+below($bp-small)
+		width: 96%
+
+.page-wrap
+	@extend .container
+	padding-top:    30px
+	padding-bottom: 50%
