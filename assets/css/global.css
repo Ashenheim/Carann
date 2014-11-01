@@ -422,7 +422,7 @@ ol.unstyled li {
 /*	====================================
  * Media
  * ==================================== */
-img {
+img, svg {
   max-width: 100%;
   height: auto;
 }
@@ -430,11 +430,6 @@ img {
 p img {
   border: 1px solid #DDDDDD;
   padding: 3px;
-}
-
-svg {
-  width: 100%;
-  height: auto;
 }
 
 iframe {
@@ -512,7 +507,7 @@ textarea {
 }
 
 /* ====================================
- * Layout styles
+ * Block layout
  * ==================================== */
 .block, .block--full, .block--half, .block--quarter {
   width: 100%;
@@ -540,6 +535,12 @@ textarea {
 .block .block_data, .block--full .block_data, .block--half .block_data, .block--quarter .block_data {
   display: none;
   visibility: hidden;
+}
+.block.active, .active.block--full, .active.block--half, .active.block--quarter {
+  box-shadow: none !important;
+}
+.block.active .block_title, .active.block--full .block_title, .active.block--half .block_title, .active.block--quarter .block_title {
+  display: none !important;
 }
 
 .square:after {
@@ -583,33 +584,41 @@ textarea {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: red;
+  background: #ffffff;
 }
-.block_entry .text {
+.block_entry .block_title {
   position: absolute;
   bottom: 0px;
   left: 0px;
   width: 100%;
-  padding: 5px 30px;
+  padding: 5px 15px;
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 0 8px #000000;
+  overflow: hidden;
   opacity: 0;
   -webkit-transition: all 300ms ease-in-out;
   -moz-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
-.block_entry .text h1 {
+.block_entry .block_title h1 {
   font-size: 1.2em;
   color: #ffffff;
   transform-origin: 0% 100%;
-  text-shadow: 0 1px 1px #000000;
-  transform: translateX(-100%);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+  transform: translateX(-10%);
   -webkit-transition: all 500ms ease-in-out;
   -moz-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .block_entry img {
   display: block;
   width: 100%;
-  opacity: 0.8;
+  opacity: 0.95;
   -webkit-transition: all 300ms ease-in-out;
   -moz-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
@@ -620,10 +629,10 @@ textarea {
   z-index: 8;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
 }
-.block_entry:hover .text, .block.active .text, .active.block--full .text, .active.block--half .text, .active.block--quarter .text {
+.block_entry:hover .block_title, .block.active .block_title, .active.block--full .block_title, .active.block--half .block_title, .active.block--quarter .block_title {
   opacity: 1;
 }
-.block_entry:hover .text h1, .block.active .text h1, .active.block--full .text h1, .active.block--half .text h1, .active.block--quarter .text h1 {
+.block_entry:hover .block_title h1, .block.active .block_title h1, .active.block--full .block_title h1, .active.block--half .block_title h1, .active.block--quarter .block_title h1 {
   transform: translateX(0);
 }
 .block_entry:hover .block-inner, .block.active .block-inner, .active.block--full .block-inner, .active.block--half .block-inner, .active.block--quarter .block-inner {
@@ -690,18 +699,24 @@ article.section header.heading {
 }
 .casestudy a.close {
   position: absolute;
-  top: 20px;
+  top: 0px;
   right: 10px;
-  width: 32px;
-  height: 32px;
-  display: block;
-  fill: #DDDDDD;
+  padding: 10px 30px;
+  display: inline-block;
+  fill: #ffffff;
+  background: #9A1F1F;
+  border: 1px solid #851b1b;
   -webkit-transition: fill 300ms ease-in-out;
   -moz-transition: fill 300ms ease-in-out;
   transition: fill 300ms ease-in-out;
 }
+.casestudy a.close svg {
+  width: 15px;
+  height: 15px;
+  display: block;
+}
 .casestudy a.close:hover {
-  fill: #D94343;
+  background: #851b1b;
 }
 .casestudy.active {
   transform: scale(1);

@@ -20,15 +20,21 @@
 		position: relative
 
 	a.close
-		+position( absolute, 20px 10px null null )
-		width:   32px
-		height:  32px
-		display: block
-		fill: $grey
+		+position( absolute, 0px 10px null null )
+		padding: 10px 30px
+		display: inline-block
+		fill: $white
+		background: $red
+		border: 1px solid darken( $red, 5% )
 		+transition( fill $easing )
 
+		svg
+			width:   15px
+			height:  15px
+			display: block
+
 		&:hover
-			fill: $red
+			background: darken( $red, 5% )
 
 
 	&.active

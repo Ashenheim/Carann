@@ -3,14 +3,16 @@
 	width: 100%
 	height: 100%
 	overflow: hidden
-	background: red
+	background: $white
 
 
-	.text
+	.block_title
 		+position(absolute, null null 0px 0px)
 		width: 100%
-		padding: 5px 30px
-		// background: rgba( $black, .2 )
+		padding: 5px 15px
+		background: rgba( $black, .4 )
+		box-shadow: inset 0 0 8px $black
+		overflow: hidden
 		opacity: 0
 		+transition( all $easing )
 		
@@ -18,15 +20,17 @@
 			font-size: 1.2em
 			color: $white
 			transform-origin: 0% 100%
-			text-shadow: 0 1px 1px $black
-			transform: translateX(-100%)
+			text-shadow: 0 1px 1px rgba( $black, .6 )
+			transform: translateX(-10%)
 			+transition( all 500ms ease-in-out )
+			+ellipsis
+
 
 
 	img
 		display: block
 		width: 100%
-		opacity: .8
+		opacity: .95
 		+transition( all $easing )
 
 
@@ -36,7 +40,7 @@
 		z-index: 8
 		box-shadow: 0 1px 8px rgba( $black, .5 )
 
-		.text
+		.block_title
 			opacity: 1
 
 			h1

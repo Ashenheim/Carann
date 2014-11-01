@@ -16,7 +16,7 @@ $(document).ready(function() {
 
 
 		// Animate scroll to div
-		$("html, body").animate( { scrollTop: documentPos + -50 } ); 
+		$("html, body").animate( { scrollTop: documentPos + -20 } ); 
 
 
 		var getTitle   = $('.block_data .title', this).text(),
@@ -40,6 +40,30 @@ $(document).ready(function() {
 			// .css('background-color', getColor)
 			.fadeIn();
 
+	});
+
+	// Reposition Windows/Positions
+	var timer;
+	$(window).bind('resize', function() {
+		if(timer)
+			clearTimeout(timer);
+			timer = setTimeout(function(){ 
+				
+				// Variables
+				var $this       = $( '.block.active' ),
+					 documentPos = $this.position().top,
+					 blockHeight = $this.height(),
+					 position    = $( documentPos + blockHeight );
+
+				// Animate scroll to div
+				$("html, body").animate( { scrollTop: documentPos + -20 } ); 
+
+				// Implant casestudy
+				// ToDo: Add text
+				element
+					.css( { 'top' : documentPos + blockHeight } );
+
+			}, 500);
 	});
 
 	// Close button
