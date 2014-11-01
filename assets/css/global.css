@@ -594,7 +594,6 @@ textarea {
   width: 100%;
   padding: 5px 15px;
   background: rgba(0, 0, 0, 0.4);
-  box-shadow: inset 0 0 8px #000000;
   overflow: hidden;
   opacity: 0;
   -webkit-transition: all 300ms ease-in-out;
@@ -643,9 +642,9 @@ textarea {
   opacity: 0.2;
 }
 .block_entry:hover img, .block.active img, .active.block--full img, .active.block--half img, .active.block--quarter img {
-  -webkit-transform: scale(1.2) rotate(-3deg);
-      -ms-transform: scale(1.2) rotate(-3deg);
-          transform: scale(1.2) rotate(-3deg);
+  -webkit-transform: scale(1.2) rotate(-4deg);
+      -ms-transform: scale(1.2) rotate(-4deg);
+          transform: scale(1.2) rotate(-4deg);
   opacity: 1;
 }
 
