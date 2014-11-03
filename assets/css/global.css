@@ -544,7 +544,7 @@ footer {
   right: 0px;
   bottom: 0px;
   left: 0px;
-  margin: 2px;
+  margin: 5px;
 }
 .block .block_data, .block--full .block_data, .block--half .block_data, .block--quarter .block_data {
   display: none;
@@ -595,8 +595,8 @@ footer {
 }
 
 .block_container {
-  margin-right: -2px;
-  margin-left: -2px;
+  margin-right: -5px;
+  margin-left: -5px;
 }
 
 .overlay {
@@ -662,6 +662,7 @@ footer {
   opacity: 1;
   cursor: pointer;
   z-index: 8;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
 }
 .block_entry:hover .block_title, .block.active .block_title, .active.block--full .block_title, .active.block--half .block_title, .active.block--quarter .block_title {
   opacity: 1;
