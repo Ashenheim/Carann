@@ -1,7 +1,6 @@
 ---
 title: More Rengar
 size: quarter
-square: true
 image: Rengar_2
 ---
 

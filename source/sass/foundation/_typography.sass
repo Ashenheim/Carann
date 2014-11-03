@@ -5,13 +5,13 @@
 body,html
 	+font-size(16px)
 	color: $color-text
-	font-family: 'Titillium Web', sans-serif
+	font-family: 'Titillium Web', $helvetica
 	font-smoothing: antialiased
 
 /*
 	Headings
 	added .alpha, .beta, .gamma, .delta, .epsilon and .zeta for OOCSS reasons.
-	==================================== */
+	------------------------------------ */
 
 h1, h2, h3, h4, h5, h6
 	font-weight: 700
@@ -40,7 +40,7 @@ h6, .zeta
 
 /*
 	Paragraphs, links and combined
-	==================================== */
+	------------------------------------ */
 
 p
 	line-height: 1.4em
@@ -63,7 +63,7 @@ p a
 
 /*
 	Separate elements
-	==================================== */
+	------------------------------------ */
 
 hr
 	border: none
@@ -71,9 +71,24 @@ hr
 	width: 100%
 	margin-bottom: 1.4em
 
+
 code
 	background: #eee
 	padding: 10px
 	border: 1px solid #ddd
 	border-radius: 3px
 	display: block
+
+
+/*
+	Classes
+	------------------------------------ */
+
+.align-left
+	text-align: left
+
+.align-center
+	text-align: center
+
+.align-right
+	text-align: right

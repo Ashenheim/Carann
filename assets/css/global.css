@@ -280,7 +280,7 @@ html {
 body {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
-  background: #ffffff url(../media/body_bg.svg) bottom center no-repeat;
+  background: #f2f2f2 url(../media/body_bg.svg) bottom center no-repeat;
   background-size: 100%;
   background-blend-mode: multiply;
 }
@@ -323,13 +323,13 @@ body, html {
   font-size: 16px;
   font-size: 1rem;
   color: #333;
-  font-family: "Titillium Web", sans-serif;
+  font-family: "Titillium Web", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-smoothing: antialiased;
 }
 
 /* Headings
  * added .alpha, .beta, .gamma, .delta, .epsilon and .zeta for OOCSS reasons.
- * ==================================== */
+ * ------------------------------------ */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   margin-top: 8px;
@@ -362,7 +362,7 @@ h6, .zeta {
 }
 
 /* Paragraphs, links and combined
- * ==================================== */
+ * ------------------------------------ */
 p {
   line-height: 1.4em;
   margin-top: 8px;
@@ -386,7 +386,7 @@ p a:hover, p a:active, p a:focus {
 }
 
 /* Separate elements
- * ==================================== */
+ * ------------------------------------ */
 hr {
   border: none;
   border-bottom: 1px solid #DDDDDD;
@@ -400,6 +400,20 @@ code {
   border: 1px solid #ddd;
   border-radius: 3px;
   display: block;
+}
+
+/* Classes
+ * ------------------------------------ */
+.align-left {
+  text-align: left;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-right {
+  text-align: right;
 }
 
 /* ====================================
@@ -502,6 +516,11 @@ textarea {
   filter: drop-shadow(0 0 5px #b1c3f8);
 }
 
+footer {
+  border-top: 1px solid #DDDDDD;
+  margin-top: 2.4em;
+}
+
 /* ====================================
  * Block layout
  * ==================================== */
@@ -512,7 +531,7 @@ textarea {
   -webkit-transition: all 300ms ease-in-out;
           transition: all 300ms ease-in-out;
 }
-.block:after, .square:after, .block--full:after, .block--half:after, .block--quarter:after {
+.block:after, .square:after, .double:after, .block--full:after, .block--half:after, .block--quarter:after {
   content: "";
   display: block;
   width: 100%;
@@ -542,15 +561,23 @@ textarea {
   padding-bottom: 100%;
 }
 
+.double:after {
+  padding-bottom: 200%;
+}
+.double:after .block_entry img {
+  width: auto;
+  height: 100%;
+}
+
 .block--full .block_title h1 {
-  font-size: 3em !important;
+  font-size: 2em !important;
 }
 
 .block--half {
   width: 50%;
 }
 .block--half .block_title h1 {
-  font-size: 2em !important;
+  font-size: 1.6em !important;
 }
 @media only screen and (max-width: 780px) {
   .block--half {
@@ -560,9 +587,6 @@ textarea {
 
 .block--quarter {
   width: 25%;
-}
-.block--quarter:after {
-  padding-bottom: 100% !important;
 }
 @media only screen and (max-width: 780px) {
   .block--quarter {
@@ -578,10 +602,10 @@ textarea {
 .overlay {
   position: fixed;
   top: 0px;
-  right: 0px;
-  bottom: 0px;
   left: 0px;
-  background: #000000;
+  height: 100%;
+  width: 100%;
+  background: #000000 url(../media/overlay-bg.png) repeat center center;
   opacity: 0.95;
   z-index: 8;
   display: none;
@@ -591,7 +615,7 @@ textarea {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: #ffffff;
+  background: #000000;
   -webkit-transition: all 300ms ease-in-out;
           transition: all 300ms ease-in-out;
 }
@@ -615,9 +639,9 @@ textarea {
       -ms-transform-origin: 0% 100%;
           transform-origin: 0% 100%;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
-  -webkit-transform: translateX(-15%);
-      -ms-transform: translateX(-15%);
-          transform: translateX(-15%);
+  -webkit-transform: translateX(-30px);
+      -ms-transform: translateX(-30px);
+          transform: translateX(-30px);
   -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
   display: inline-block;
@@ -631,8 +655,8 @@ textarea {
   width: 100%;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
-  -webkit-filter: sepia(80%);
-  filter: sepia(80%);
+  -webkit-filter: saturate(2) sepia(80%);
+  filter: saturate(2) sepia(80%);
 }
 .block_entry:hover, .block.active, .active.block--full, .active.block--half, .active.block--quarter {
   opacity: 1;
@@ -651,12 +675,12 @@ textarea {
   opacity: 0.2;
 }
 .block_entry:hover img, .block.active img, .active.block--full img, .active.block--half img, .active.block--quarter img {
-  -webkit-transform: scale(1.25) rotate(-4deg);
-      -ms-transform: scale(1.25) rotate(-4deg);
-          transform: scale(1.25) rotate(-4deg);
+  -webkit-transform: scale(1.2) rotate(-4deg);
+      -ms-transform: scale(1.2) rotate(-4deg);
+          transform: scale(1.2) rotate(-4deg);
   opacity: 1;
-  -webkit-filter: sepia(0%);
-  filter: sepia(0%);
+  -webkit-filter: saturate(1) sepia(0%);
+  filter: saturate(1) sepia(0%);
 }
 
 /* ====================================

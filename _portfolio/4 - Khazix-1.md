@@ -1,7 +1,7 @@
 ---
 title: Second Rengar
-size: quarter
-square: true
+size: half
+ratio: half
 image: Khazix_1
 ---
 

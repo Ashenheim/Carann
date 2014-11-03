@@ -1,7 +1,6 @@
 ---
 title: Mecha Kha'zix
-size: quarter
-square: true
+size: half
 image: Khazix_1
 ---
 

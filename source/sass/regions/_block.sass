@@ -47,16 +47,24 @@ $gutter : 2px
 	padding-bottom: 100%
 
 
+.double:after
+	@extend .block:after
+	padding-bottom: 200%
+
+	.block_entry img
+		width: auto
+		height: 100%
+
 .block--full
 	@extend .block
 	.block_title h1
-		font-size: 3em !important
+		font-size: 2em !important
 
 .block--half
 	@extend .block
 	width: 50%
 	.block_title h1
-		font-size: 2em !important
+		font-size: 1.6em !important
 
 	+below( $bp-medium )
 		width: 100%
@@ -65,9 +73,6 @@ $gutter : 2px
 	@extend .block
 	width: 25%
 
-	&:after
-		padding-bottom: 100% !important
-
 	+below( $bp-medium )
 		width: 50%
 
@@ -75,16 +80,15 @@ $gutter : 2px
 
 .block_container
 	@extend %clearfix
-	margin-right: -$gutter
-	margin-left:  -$gutter
-
-
-
+	margin-right: -($gutter)
+	margin-left:  -($gutter)
 
 
 .overlay
-	+position(fixed, 0px 0px 0px 0px)
-	background: $black
+	+position(fixed, 0px null null 0px)
+	height: 100%
+	width:  100%
+	background: $black url(../media/overlay-bg.png) repeat center center
 	opacity: .95
 	z-index: 8
 	display: none

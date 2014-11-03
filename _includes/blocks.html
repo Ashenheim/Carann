@@ -2,7 +2,7 @@
 
 	{% for posts in site.portfolio %}
 			
-	<div class="[ block {% if posts.size == 'quarter' %}block--quarter{% elsif posts.size == 'half' %}block--half{% else %}block--full{% endif %} ] {% if posts.square == true %}square{% elsif posts.square == false %} {% else %} {% endif %}">
+	<div class="[ block {% if posts.size == 'quarter' %}block--quarter{% elsif posts.size == 'half' %}block--half{% else %}block--full{% endif %} ] {% if posts.ratio == 'half' %}half{% elsif posts.ratio == 'double' %}double{% elsif posts.ratio == 'quarter' %}half{% else %}square{% endif %}">
 		<div class="block_inner">
 
 			<div class="block_entry">
@@ -12,7 +12,7 @@
 				{% elsif posts.youtube %}		
 				<iframe width="640" height="390" src="//www.youtube.com/embed/{{ posts.youtube }}?controls=0&showinfo=0&rel=0" controls="0" frameborder="0" allowfullscreen></iframe>
 				{% elsif posts.image %}
-				<img src="{{ site.url }}/images/{{ posts.image }}{% if posts.square == true %}-square{% endif %}.jpg" alt="{{ posts.image }}">
+				<img src="{{ site.url }}/images/{{ posts.image }}{% if posts.ratio == 'double' %}-double{% elsif posts.size == 'quarter' %}-square{% elsif posts.ratio == square %}-square{% endif %}.jpg" alt="{{ posts.image }}">
 				{% endif %}
 
 				
@@ -30,7 +30,6 @@
 			
 		</div>
 		
-		<!-- Data for Case -->
 		<div class="block_data">
 			<div class="wrapper">
 				
@@ -44,7 +43,6 @@
 
 			</div>
 		</div>
-		<!-- end -->
 
 
 	</div>
