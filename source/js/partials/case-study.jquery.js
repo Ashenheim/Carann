@@ -1,7 +1,10 @@
+/* Places the casestudy window on the right position and scrolls
+ * to it's top. Also resizes when screen resizes.
+ * */
+
 $(document).ready(function() {
 
-	var element  = $( '.casestudy' ),
-	    savePosition;
+	var element  = $( '.casestudy' );
 
 	$( '.block' ).click(function() {
 
@@ -39,8 +42,6 @@ $(document).ready(function() {
 			.empty()
 			.html( getContent );
 
-		console.log( savePosition );
-
 	});
 
 	// Reposition Windows/Positions
@@ -48,21 +49,28 @@ $(document).ready(function() {
 	$(window).bind('resize', function() {
 		if(timer)
 			clearTimeout(timer);
-			timer = setTimeout(function(){ 
+			timer = setTimeout(function(){
+
+				console.log('Resizing..');
+
+				if( $('.casestudy').hasClass('active') ) {
 				
-				// Variables
-				var $this       = $( '.block.active' ),
-					 documentPos = $this.position().top,
-					 blockHeight = $this.height(),
-					 position    = $( documentPos + blockHeight );
+					// Variables
+					var $this       = $( '.block.active' ),
+						 documentPos = $this.position().top,
+						 blockHeight = $this.height(),
+						 position    = $( documentPos + blockHeight );
 
-				// Animate scroll to div
-				$("html, body").animate( { scrollTop: documentPos + -20 } ); 
+					// Animate scroll to div
+					$("html, body").animate( { scrollTop: documentPos + blockHeight + -50 } );
 
-				// Implant casestudy
-				// ToDo: Add text
-				element
-					.css( { 'top' : documentPos + blockHeight } );
+					// Implant casestudy
+					// ToDo: Add text
+					element
+						.css( { 'top' : documentPos + blockHeight } );
+
+					console.log('Done..');
+				} else { console.log('No active casestudy, aborting..'); }
 
 			}, 500);
 	});
@@ -75,11 +83,10 @@ $(document).ready(function() {
 			.removeClass('active');
 		$( '.block' ).removeClass('active');
 
-		$("html,body").animate( { scrollTop: $('.block_container').position().top } );
+		$("html,body").animate( { scrollTop: element.position().top + -50 } );
 
 		e.preventDefault();
 
-		console.log( savePosition );
 	});
 
 });

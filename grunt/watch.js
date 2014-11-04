@@ -3,6 +3,7 @@ module.exports = {
 	site: {
 		files: [ 'index.html',
 					'_includes/*',
+					'_includes/svg/*.svg',
 					'_portfolio/*',
 					'_config-dev.yml',
 					'images/**/*',

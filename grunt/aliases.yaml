@@ -9,6 +9,7 @@ default:
 build:
 - 'jshint'
 - 'concat'
+- 'uglify'
 - 'sass:dist'
 - 'autoprefixer'
 - 'shell:jekyllBuild'

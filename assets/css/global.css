@@ -323,12 +323,12 @@ body, html {
   font-size: 16px;
   font-size: 1rem;
   color: #333;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Titillium Web", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-smoothing: antialiased;
 }
 
 /* Headings
- * added .alpha, .beta, .gamma, .delta, .epsilon and .zeta for OOCSS reasons.
+ * added .alpha, .beta, .gamma, .delta, .epsilon and .zeta for OOCSS reasons >:3.
  * ------------------------------------ */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
@@ -655,8 +655,8 @@ footer {
   width: 100%;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
-  -webkit-filter: saturate(2) sepia(80%);
-  filter: saturate(2) sepia(80%);
+  -webkit-filter: saturate(1);
+  filter: saturate(1);
 }
 .block_entry:hover, .block.active, .active.block--full, .active.block--half, .active.block--quarter {
   opacity: 1;
@@ -680,8 +680,8 @@ footer {
       -ms-transform: scale(1.2) rotate(-4deg);
           transform: scale(1.2) rotate(-4deg);
   opacity: 1;
-  -webkit-filter: saturate(1) sepia(0%);
-  filter: saturate(1) sepia(0%);
+  -webkit-filter: saturate(1.4);
+  filter: saturate(1.4);
 }
 
 /* ====================================
@@ -718,11 +718,13 @@ article.section header.heading {
 }
 
 .casestudy {
-  background: #f2f2f2;
+  background: #ffffff;
   border-top: 1px solid #DDDDDD;
   border-bottom: 1px solid #DDDDDD;
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.1);
   width: 100%;
   height: auto;
+  min-height: 70%;
   display: none;
   position: absolute;
   top: 40px;
@@ -745,21 +747,18 @@ article.section header.heading {
   position: absolute;
   top: 0px;
   right: 10px;
-  padding: 10px 30px;
   display: inline-block;
-  fill: #ffffff;
-  background: #9A1F1F;
-  border: 1px solid #851b1b;
+  fill: #9A1F1F;
   -webkit-transition: fill 300ms ease-in-out;
   transition: fill 300ms ease-in-out;
 }
 .casestudy a.close svg {
-  width: 15px;
-  height: 15px;
+  width: 50px;
+  height: 50px;
   display: block;
 }
 .casestudy a.close:hover {
-  background: #851b1b;
+  fill: #851b1b;
 }
 .casestudy.active {
   -webkit-transform: scale(1);
