@@ -1,11 +1,11 @@
 # Build settings
 
-name: DOCType
+name: Carann
 
 markdown: redcarpet
 permalink: pretty
 
-url: /my-portfolio
+url: /Carann
 
 port: 4000
 
