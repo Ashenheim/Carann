@@ -1,10 +1,10 @@
 ---
 title: Rengar
-size: full
-ratio: half
+size: half
 image: Rengar_2
 color: 111221
 ---
+
 
 # Heading one
 
@@ -19,6 +19,7 @@ color: 111221
 - List item one
 - List item two
 - List item three
+
 
 >   
     <div style="background: red">

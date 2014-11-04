@@ -1,7 +1,6 @@
 ---
 title: Mecha Kha'Zix
-size: quarter
-ratio: double
+size: half
 image: Khazix_3
 color: 1e1619
 ---

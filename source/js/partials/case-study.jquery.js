@@ -19,7 +19,8 @@ $(document).ready(function() {
 
 
 		// Animate scroll to div
-		$("html, body").animate( { scrollTop: documentPos + -40 } ); 
+		$("html, body").animate( { scrollTop: documentPos + blockHeight + -50 } );
+		console.log( documentPos + blockHeight );
 
 
 		var getTitle   = $('.block_data .title', this).text(),
@@ -38,12 +39,7 @@ $(document).ready(function() {
 			.empty()
 			.html( getContent );
 
-		$( '.overlay' )
-			// .removeAttr( 'style' )
-			// .css('background-color', getColor)
-			.fadeIn();
-
-			console.log( savePosition );
+		console.log( savePosition );
 
 	});
 
@@ -72,13 +68,12 @@ $(document).ready(function() {
 	});
 
 	// Close button
-	$( '.close, .overlay' ).click(function(e) {
+	$( '.close' ).click(function(e) {
 
 		$( element )
 			.fadeOut(310)
 			.removeClass('active');
 		$( '.block' ).removeClass('active');
-		$( '.overlay' ).fadeOut();
 
 		$("html,body").animate( { scrollTop: $('.block_container').position().top } );
 
