@@ -10,10 +10,12 @@ $(document).ready(function() {
 
 		var savePosition = $(window).top;
 
-		var $this       = $( this ),
-		    documentPos = $this.position().top,
-		    blockHeight = $this.height(),
-		    position    = $( documentPos + blockHeight );
+		var $this        = $( this ),
+		    documentPosX = $this.position().left,
+		    documentPosY = $this.position().top,
+		    blockHeight  = $this.height(),
+		    blockWidth   = $this.width(),
+		    position     = $( documentPosY + blockHeight );
 
 
 		// Add .active class to current Block
@@ -22,8 +24,8 @@ $(document).ready(function() {
 
 
 		// Animate scroll to div
-		$("html, body").animate( { scrollTop: documentPos + blockHeight + -50 } );
-		console.log( documentPos + blockHeight );
+		$("html, body").animate( { scrollTop: documentPosY + blockHeight + -50 } );
+		console.log( documentPosY + blockHeight );
 
 
 		var getTitle   = $('.block_data .title', this).text(),
@@ -31,9 +33,8 @@ $(document).ready(function() {
 		    getColor   = $('.block_data .color', this).text();
 
 		// Implant casestudy
-		// ToDo: Add text
 		element
-			.css( { 'top' : documentPos + blockHeight } )
+			.css( { 'top' : documentPosY + blockHeight } )
 			.fadeIn(310)
 			.addClass('active');
 		element.find('.title')
@@ -41,6 +42,13 @@ $(document).ready(function() {
 		element.find('.content')
 			.empty()
 			.html( getContent );
+
+		// Positions arrow
+		var arrowPos = (documentPosX + (blockWidth / 2) + -17.5);
+		element.find('.arrow')
+			.css( { 'left' : arrowPos } );
+
+		console.log( arrowPos );
 
 	});
 
@@ -57,22 +65,28 @@ $(document).ready(function() {
 				
 					// Variables
 					var $this       = $( '.block.active' ),
-						 documentPos = $this.position().top,
-						 blockHeight = $this.height(),
-						 position    = $( documentPos + blockHeight );
+					    documentPosX = $this.position().left,
+					    documentPosY = $this.position().top,
+					    blockHeight  = $this.height(),
+					    blockWidth   = $this.width(),
+					    position     = $( documentPosY + blockHeight );
 
 					// Animate scroll to div
-					$("html, body").animate( { scrollTop: documentPos + blockHeight + -50 } );
+					$("html, body").animate( { scrollTop: documentPosY + blockHeight + -50 } );
 
 					// Implant casestudy
-					// ToDo: Add text
 					element
-						.css( { 'top' : documentPos + blockHeight } );
+						.css( { 'top' : documentPosY + blockHeight } );
+
+					// Repositions arrow
+					var arrowPos = (documentPosX + (blockWidth / 2) + -17.5);
+					element.find('.arrow')
+						.css( { 'left' : arrowPos } );
 
 					console.log('Done..');
 				} else { console.log('No active casestudy, aborting..'); }
 
-			}, 500);
+			}, 700);
 	});
 
 	// Close button

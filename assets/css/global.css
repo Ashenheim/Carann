@@ -280,8 +280,8 @@ html {
 body {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
-  background: #f2f2f2 url(../media/body_bg.svg) bottom center no-repeat;
-  background-size: 100%;
+  background: #f2f2f2 url(../media/slogan.svg) bottom center no-repeat;
+  background-size: 25%;
   background-blend-mode: multiply;
 }
 
@@ -544,7 +544,7 @@ footer {
   right: 0px;
   bottom: 0px;
   left: 0px;
-  margin: 5px;
+  margin: 8px;
 }
 .block .block_data, .block--full .block_data, .block--half .block_data, .block--quarter .block_data {
   display: none;
@@ -595,8 +595,8 @@ footer {
 }
 
 .block_container {
-  margin-right: -5px;
-  margin-left: -5px;
+  margin-right: -8px;
+  margin-left: -8px;
 }
 
 .overlay {
@@ -661,7 +661,6 @@ footer {
 .block_entry:hover, .block.active, .active.block--full, .active.block--half, .active.block--quarter {
   opacity: 1;
   cursor: pointer;
-  z-index: 8;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
 }
 .block_entry:hover .block_title, .block.active .block_title, .active.block--full .block_title, .active.block--half .block_title, .active.block--quarter .block_title {
@@ -724,20 +723,15 @@ article.section header.heading {
   box-shadow: 0 0px 5px rgba(0, 0, 0, 0.1);
   width: 100%;
   height: auto;
-  min-height: 70%;
+  min-height: 50%;
   display: none;
   position: absolute;
   top: 40px;
   left: 0px;
-  z-index: 10;
+  z-index: 5;
   -webkit-transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
-  -webkit-transform: scale(1, 0);
-      -ms-transform: scale(1, 0);
-          transform: scale(1, 0);
-  -webkit-transform-origin: 50% 0%;
-      -ms-transform-origin: 50% 0%;
-          transform-origin: 50% 0%;
+  opacity: 0;
 }
 .casestudy .container, .casestudy .page-wrap {
   padding: 2.4em 45px;
@@ -747,23 +741,42 @@ article.section header.heading {
   position: absolute;
   top: 0px;
   right: 10px;
+  padding: 15px;
   display: inline-block;
-  fill: #9A1F1F;
+  fill: #ffffff;
+  background: #9A1F1F;
+  border: 1px solid #851b1b;
   -webkit-transition: fill 300ms ease-in-out;
   transition: fill 300ms ease-in-out;
+  z-index: 9;
+}
+@media only screen and (max-width: 780px) {
+  .casestudy a.close {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 .casestudy a.close svg {
-  width: 50px;
-  height: 50px;
+  width: 15px;
+  height: 15px;
   display: block;
 }
 .casestudy a.close:hover {
-  fill: #851b1b;
+  background: #851b1b;
+}
+.casestudy .arrow {
+  fill: #ffffff;
+  width: 35px;
+  height: 20px;
+  position: absolute;
+  top: -17px;
+  bottom: 0px;
+  z-index: 8;
+  -webkit-transition: left 300ms ease-in-out;
+  transition: left 300ms ease-in-out;
 }
 .casestudy.active {
-  -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-          transform: scale(1);
+  opacity: 1;
 }
 
 .fullscreen {
