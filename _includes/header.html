@@ -1,10 +1,15 @@
 <header class="main-header">
 	
-	{% assign items = site.portfolio | reversed | sort: 'date' %}
-	{% for entry in items limit:1 %}
-			
-	{% include entry.html %}
+	{% assign items = site.portfolio | sort: "date" %}
+	{% for entry in items reversed %}
 
+	{% capture count %}{{ count | plus: '1' }}{% endcapture %}
+	{% if count == '1' %}
+		
+		{% include entry.html %}
+
+	{% endif %} 
+			
 	{% endfor %}
 
 </header>

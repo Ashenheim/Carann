@@ -1,23 +1,15 @@
-<style>
-	.block_container {
-		margin-top: 4em;
-	}
-</style>
-
 <div class="block_container">
-<ul>
-	{% assign items = site.portfolio | sort: "date" %}
-	{% for entry in items reversed limit:3 %}
-			
-	<!-- {% include entry.html %} -->
-	<p>
-		{{ entry.date | date: "%-d %B %Y" }}
-		-
-		<strong>
-			{{ entry.title }}
-		</strong>
-	</p>
 
+	{% assign items = site.portfolio | sort: "date" %}
+	{% for entry in items reversed %}
+
+	{% capture block_count %}{{ block_count | plus: '1' }}{% endcapture %}
+	{% if block_count == '2' or block_count == '3' or block_count == '4' or block_count == '5' or block_count == '6' %}
+		
+		{% include entry.html %}
+
+	{% endif %} 
+			
 	{% endfor %}
-</ul>
+
 </div>

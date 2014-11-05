@@ -7,6 +7,8 @@ module.exports = {
 					'_includes/*',
 					'_includes/svg/*.svg',
 					'_portfolio/*',
+					'_data/*.yml',
+					'_config.yml',
 					'_config-dev.yml',
 					'images/**/*',
 					'assets/media/*.*' ],

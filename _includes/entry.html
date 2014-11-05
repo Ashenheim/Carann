@@ -8,18 +8,19 @@
 			{% elsif entry.youtube %}		
 			<iframe width="640" height="390" src="//www.youtube.com/embed/{{ entry.youtube }}?controls=0&showinfo=0&rel=0" controls="0" frameborder="0" allowfullscreen></iframe>
 			{% elsif entry.image %}
-			<img src="{{ site.url }}/images/{{ entry.image }}{% if entry.ratio == 'double' %}-double{% elsif entry.size == 'quarter' %}-square{% elsif entry.ratio == square %}-square{% endif %}.jpg" alt="{{ entry.image }}">
+			<a href="{{ entry.url }}" class="block-link">
+				<img src="{{ site.baseurl }}/images/{{ entry.image }}{% if entry.ratio == 'double' %}-double{% elsif entry.size == 'quarter' %}-square{% elsif entry.ratio == square %}-square{% endif %}.jpg" alt="{{ entry.image }}">
+			</a>
 			{% endif %}
 			
 			{% if entry.youtube %}
 			{% elsif entry.notitle == true %}
 			{% else %}
-			<div class="block_title">
-				<h1>
-					{{ entry.title }}
-				</h1>
-				<p>{{ entry.date }}</p>
-			</div>
+				<div class="block_title">
+					<h1>
+						{{ entry.title }}
+					</h1>
+				</div>
 			{% endif %}
 
 		</div>

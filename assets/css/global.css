@@ -296,7 +296,7 @@ body {
 }
 
 .container, .page-wrap {
-  max-width: 450px;
+  max-width: 960px;
   width: 90%;
   margin: 0 auto;
 }
@@ -637,6 +637,8 @@ footer {
   padding: 5px 15px;
   background: rgba(0, 0, 0, 0.4);
   overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }

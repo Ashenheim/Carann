@@ -6,11 +6,11 @@ $(document).ready(function() {
 
 	var element  = $( '.casestudy' );
 
-	$( '.block' ).click(function() {
+	$( '.block-link' ).click(function(e) {
 
 		var savePosition = $(window).top;
 
-		var $this        = $( this ),
+		var $this        = $( this ).parents('.block'),
 		    documentPosX = $this.position().left,
 		    documentPosY = $this.position().top,
 		    blockHeight  = $this.height(),
@@ -49,6 +49,8 @@ $(document).ready(function() {
 			.css( { 'left' : arrowPos } );
 
 		console.log( arrowPos );
+
+		return false;
 
 	});
 

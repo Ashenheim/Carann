@@ -19,8 +19,4 @@ exclude: [
 collections:
   portfolio:
     output: true
-    layout: entry
-    sort: date
-    meta_sort_key: date
-    permalink: /portfolio/:path/
-    direction: descending
+    permalink: /portfolio/:title/
