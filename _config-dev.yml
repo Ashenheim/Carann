@@ -17,4 +17,7 @@ exclude: [
   'source']
 
 collections:
-- portfolio
+  portfolio:
+    output: true
+    layout: entry
+    permalink: /portfolio/:path/

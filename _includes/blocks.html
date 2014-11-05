@@ -1,51 +1,9 @@
 <div class="block_container">
-
-	{% for posts in site.portfolio %}
+	
+	{% assign items = site.portfolio | sort: 'date' %}
+	{% for entry in items offset:1 limit:10 %}
 			
-	<div class="[ block {% if posts.size == 'quarter' %}block--quarter{% elsif posts.size == 'half' %}block--half{% else %}block--full{% endif %} ] {% if posts.ratio == 'half' %}half{% elsif posts.ratio == 'double' %}double{% elsif posts.ratio == 'quarter' %}half{% else %}square{% endif %}">
-		<div class="block_inner">
-
-			<div class="block_entry">
-			
-				{% if posts.text == true %}
-				{{ posts.content }}
-				{% elsif posts.youtube %}		
-				<iframe width="640" height="390" src="//www.youtube.com/embed/{{ posts.youtube }}?controls=0&showinfo=0&rel=0" controls="0" frameborder="0" allowfullscreen></iframe>
-				{% elsif posts.image %}
-				<img src="{{ site.url }}/images/{{ posts.image }}{% if posts.ratio == 'double' %}-double{% elsif posts.size == 'quarter' %}-square{% elsif posts.ratio == square %}-square{% endif %}.jpg" alt="{{ posts.image }}">
-				{% endif %}
-
-				
-				{% if posts.youtube %}
-				{% elsif posts.notitle == true %}
-				{% else %}
-				<div class="block_title">
-					<h1>
-						{{ posts.title }}
-					</h1>
-				</div>
-				{% endif %}
-
-			</div>
-			
-		</div>
-		
-		<div class="block_data">
-			<div class="wrapper">
-				
-				<span class="title">{{ posts.title }}</span>
-
-				<span class="content">
-					{{ posts.content }}
-				</span>
-
-				<span class="color">#{{ posts.color }}</span>
-
-			</div>
-		</div>
-
-
-	</div>
+	{% include entry.html %}
 
 	{% endfor %}
 

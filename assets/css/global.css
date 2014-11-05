@@ -237,16 +237,16 @@ td, th {
 }
 
 .container, .page-wrap, .media-block,
-.media-block--body, .block_container {
+.media-block--body, .block_container, header.main-header {
   *zoom: 1;
 }
 .container:before, .page-wrap:before, .media-block:before,
-.media-block--body:before, .block_container:before {
+.media-block--body:before, .block_container:before, header.main-header:before {
   content: " ";
   display: table;
 }
 .container:after, .page-wrap:after, .media-block:after,
-.media-block--body:after, .block_container:after {
+.media-block--body:after, .block_container:after, header.main-header:after {
   content: " ";
   display: table;
   clear: both;
@@ -296,7 +296,7 @@ body {
 }
 
 .container, .page-wrap {
-  max-width: 960px;
+  max-width: 450px;
   width: 90%;
   margin: 0 auto;
 }
@@ -498,24 +498,6 @@ textarea {
 /* ====================================
  * Header
  * ==================================== */
-.logo, .logo svg {
-  display: block;
-  width: 60px;
-  height: 60px;
-}
-.logo svg {
-  -webkit-transition: all 300ms ease-in-out;
-          transition: all 300ms ease-in-out;
-  fill: #414B69;
-  -webkit-filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.4));
-  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.4));
-}
-.logo:hover svg, .logo svg:hover svg {
-  fill: #495c94;
-  -webkit-filter: drop-shadow(0 0 5px #b1c3f8);
-  filter: drop-shadow(0 0 5px #b1c3f8);
-}
-
 footer {
   border-top: 1px solid #DDDDDD;
   margin-top: 2.4em;
@@ -544,7 +526,7 @@ footer {
   right: 0px;
   bottom: 0px;
   left: 0px;
-  margin: 8px;
+  margin: 2px;
 }
 .block .block_data, .block--full .block_data, .block--half .block_data, .block--quarter .block_data {
   display: none;
@@ -594,9 +576,9 @@ footer {
   }
 }
 
-.block_container {
-  margin-right: -8px;
-  margin-left: -8px;
+.block_container, header.main-header {
+  margin-right: -2px;
+  margin-left: -2px;
 }
 
 .overlay {
@@ -649,6 +631,10 @@ footer {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+.block_entry .block_title p {
+  color: #ffffff;
+  font-size: 0.6em;
 }
 .block_entry img {
   display: block;

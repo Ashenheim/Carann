@@ -2,6 +2,8 @@ module.exports = {
 	
 	site: {
 		files: [ 'index.html',
+					'index.md',
+					'_layouts/*',
 					'_includes/*',
 					'_includes/svg/*.svg',
 					'_portfolio/*',

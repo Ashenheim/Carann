@@ -3,17 +3,5 @@
    ==================================== */
 
 
-.logo
-	display: block
-	width:  60px
-	height: 60px
-
-	svg
-		@extend .logo
-		transition: all $easing
-		fill: $color-main
-		+filter( drop-shadow( 0 1px 1px rgba( $black, .4 ) ) )
-
-	&:hover svg
-		fill: $color-sec
-		+filter( drop-shadow( 0 0 5px lighten( saturate( $color-main, 60% ), 50% ) ) )
+header.main-header
+	@extend .block_container

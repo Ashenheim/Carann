@@ -1,7 +1,9 @@
 ---
-title: More Rengar
-size: quarter
-image: Rengar_2
+title: Kha'zix
+date: 2014 10 03
+image: Khazix_1
+
+size: half
 ---
 
 **Lorem ipsum dolor sit amet, consectetur** adipisicing elit. Quae fugiat veniam deserunt adipisci blanditiis esse eaque soluta velit a reiciendis est ut voluptate eveniet ullam corporis, cum quasi facilis commodi libero enim eum itaque pariatur, quam. Sunt quia neque ratione qui eveniet corrupti assumenda pariatur dolorum, maxime cumque excepturi. Nulla vitae sint atque hic quo, inventore mollitia, ut laudantium dolore praesentium doloribus consequatur vel voluptate necessitatibus, cupiditate!

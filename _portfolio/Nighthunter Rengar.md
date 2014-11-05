@@ -1,8 +1,10 @@
 ---
-title: Rengar
-size: half
+title: Nighthunter Rengar
+date: 2014 10 01
 image: Rengar_2
-color: 111221
+
+size: full
+ratio: half
 ---
 
 
