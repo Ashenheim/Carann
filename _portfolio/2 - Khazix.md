@@ -1,6 +1,6 @@
 ---
 title: Kha'zix
-date: 2014 10 03
+date: 2014/10/03
 image: Khazix_1
 
 size: half

@@ -43,9 +43,11 @@ h6, .zeta
 	------------------------------------ */
 
 p
+	margin: 0
 	line-height: 1.4em
-	margin-top: 8px
-	margin-bottom: 9px
+
+	& + p
+		margin-top: $base-spacing
 
 a
 	color: $color-link
@@ -72,12 +74,15 @@ hr
 	margin-bottom: 1.4em
 
 
-code
+pre
 	background: #eee
 	padding: 10px
 	border: 1px solid #ddd
 	border-radius: 3px
-	display: block
+	color: $black
+	font:
+		family: $helvetica
+		size: 1em
 
 
 /*

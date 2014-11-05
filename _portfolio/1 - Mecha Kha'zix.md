@@ -1,6 +1,6 @@
 ---
 title: Mecha Kha'Zix
-date: 2014 10 02
+date: 2014/10/02
 image: Khazix_3
 
 size: half

@@ -21,3 +21,4 @@ collections:
     output: true
     layout: entry
     permalink: /portfolio/:path/
+    direction: descending

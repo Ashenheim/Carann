@@ -1,6 +1,6 @@
 ---
 title: Volibear, The Thunder's Roar
-date: 2014 10 05
+date: 2014/10/05
 image: Volibear_1
 
 size: quarter

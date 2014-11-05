@@ -1,5 +1,3 @@
 ---
 layout: frontpage
 ---
-
-# Hello world!
