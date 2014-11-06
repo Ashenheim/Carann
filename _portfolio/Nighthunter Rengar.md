@@ -1,10 +1,11 @@
 ---
 title: Nighthunter Rengar
-date: 2014/10/01
+date: 2014/10/07
 image: Rengar_2
 
-size: full
-ratio: half
+layout: page
+
+size: half
 ---
 
 

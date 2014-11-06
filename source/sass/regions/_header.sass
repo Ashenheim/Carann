@@ -5,3 +5,14 @@
 
 header.main-header
 	@extend .block_container
+	position: relative
+
+	.logo
+		width:  200px
+		height: 200px
+		+position(absolute, $gutter null null $gutter)
+		z-index: 6
+
+		+below($bp-small)
+			width:  150px
+			height: 150px

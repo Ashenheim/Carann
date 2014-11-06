@@ -1,7 +1,9 @@
 ---
 title: Guardian of the Sands Kha'Zix
-date: 2014/10/06
+date: 2014/10/05
 image: Khazix_2
+
+layout: page
 
 size: half
 ratio: half

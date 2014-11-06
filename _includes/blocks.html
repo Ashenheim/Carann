@@ -13,3 +13,18 @@
 	{% endfor %}
 
 </div>
+
+<ul style="margin-top: 3em;">
+
+	{% assign items = site.portfolio | sort: "date" %}
+	{% for entry in items reversed %}
+		
+		<li>
+			<p>
+				<a href="{{ entry.url }}">link</a> - <strong>{{ entry.title }}</strong> - {{ entry.date }}
+			</p>
+		</li>
+					
+	{% endfor %}
+
+</ul>

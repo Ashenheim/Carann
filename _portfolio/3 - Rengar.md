@@ -3,7 +3,10 @@ title: Rengar, the Pridestalker
 date: 2014/10/06
 image: Rengar_1
 
-size: quarter
+layout: page
+
+size: half
+ratio: half
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt optio voluptates animi nemo aliquam aperiam dignissimos eum veritatis perferendis delectus. Repudiandae corporis repellat id maiores voluptates enim eos consectetur? Totam quos, est commodi deserunt sapiente perspiciatis alias odit sunt. Cum assumenda, commodi sint doloribus libero tempora fuga dolore incidunt ea. Impedit architecto libero accusantium perspiciatis error, sunt hic. Nesciunt adipisci fugiat, facere cumque, accusantium iure non est provident at reprehenderit quae, atque maxime sed debitis, sunt obcaecati doloribus dolorem possimus.

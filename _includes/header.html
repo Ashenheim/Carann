@@ -1,4 +1,10 @@
 <header class="main-header">
+
+	<div class="logo">
+		<a href="{{ site.baseurl }}">
+			{% include svg/carann_logotype.svg %}
+		</a>
+	</div>
 	
 	{% assign items = site.portfolio | sort: "date" %}
 	{% for entry in items reversed %}

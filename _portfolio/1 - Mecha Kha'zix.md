@@ -1,10 +1,12 @@
 ---
 title: Mecha Kha'Zix
-date: 2014/10/02
+date: 2014/10/06
 image: Khazix_3
 
+layout: page
+
 size: half
-color: 1e1619
+ratio: half
 ---
 
 # Kha'Zix
