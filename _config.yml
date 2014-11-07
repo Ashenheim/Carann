@@ -19,4 +19,4 @@ exclude: [
 collections:
   portfolio:
     output: true
-    permalink: /portfolio/:path/
+    permalink: /portfolio/:title/
