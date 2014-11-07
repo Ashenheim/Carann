@@ -1,0 +1,34 @@
+{% include head.html %}
+
+<header class="banner">
+	
+	<style>
+		header.banner {
+			background-image: url( {{ site.url }}/images/{{ page.image }}.jpg );
+		}
+	</style>
+
+	<div class="inner">
+		<h1 class="title" id="Title">
+			{{ page.title }}
+		</h1>
+		<p>
+			<time>
+				{{ page.date | date: "%-d %B %Y" }}
+			</time>
+		</p>
+	</div>
+
+</header>
+
+<div class="page-wrap">
+	
+	<article class="content" id="Content">
+		{{ page.content }}
+	</article>
+
+	{% include footer.html %}
+
+</div>	
+
+{% include foot.html %}

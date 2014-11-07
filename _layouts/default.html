@@ -1,5 +1,17 @@
-<div style="background:red;">
-	<h1>portfolio</h1>
-</div>
+{% include head.html %}
 
-{{ content }}
+<div class="page-wrap">
+	
+	{% include header.html %}
+	
+	{{ content }}
+	
+	{% include cases.html %}
+
+	{% include blocks.html %}
+
+	{% include footer.html %}
+
+</div>	
+
+{% include foot.html %}

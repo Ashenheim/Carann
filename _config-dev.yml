@@ -12,6 +12,7 @@ port: 4000
 exclude: [
   'node_modules',
   'sass_cache',
+  'grunt',
   'Gruntfile.js',
   'package.json',
   'source']

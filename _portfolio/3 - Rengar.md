@@ -3,7 +3,7 @@ title: Rengar, the Pridestalker
 date: 2014/10/06
 image: Rengar_1
 
-layout: page
+layout: portfolio
 
 size: half
 ratio: half

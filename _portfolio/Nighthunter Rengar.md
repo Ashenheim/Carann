@@ -3,7 +3,7 @@ title: Nighthunter Rengar
 date: 2014/10/07
 image: Rengar_2
 
-layout: page
+layout: portfolio
 
 size: half
 ---

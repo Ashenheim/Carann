@@ -3,7 +3,7 @@ title: Volibear, The Thunder's Roar
 date: 2014/10/01
 image: Volibear_1
 
-layout: page
+layout: portfolio
 
 size: half
 ---
