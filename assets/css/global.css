@@ -420,6 +420,14 @@ pre {
   text-align: right;
 }
 
+h1.title a {
+  color: #000000;
+}
+h1.title a:hover, h1.title a:active, h1.title a:focus {
+  color: rgba(0, 0, 0, 0.9);
+  border-bottom: 3px solid #000000;
+}
+
 /* ====================================
  * List styling (ul, ol, dl)
  * ==================================== */
@@ -547,6 +555,17 @@ header.main-header .logo {
 footer {
   border-top: 1px solid #DDDDDD;
   margin-top: 2.4em;
+}
+
+/* ====================================
+ * Layout
+ * ==================================== */
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
 }
 
 /* ====================================
@@ -685,24 +704,28 @@ footer {
 }
 .block_entry .permalink {
   position: absolute;
-  right: 0px;
-  bottom: 0px;
+  top: 0px;
+  left: 0px;
   z-index: 4;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
   -webkit-transition: all 300ms ease-in-out;
           transition: all 300ms ease-in-out;
   display: none;
   opacity: 0;
+  -webkit-filter: drop-shadow(0 1px 3px black);
+          filter: drop-shadow(0 1px 3px black);
 }
 .block_entry .permalink svg {
-  width: 34px;
-  height: 34px;
+  width: 22px;
+  height: 22px;
   display: block;
-  fill: #FFFFFF;
+  fill: rgba(255, 255, 255, 0.5);
+  -webkit-transition: all 300ms ease-in-out;
+          transition: all 300ms ease-in-out;
 }
-.block_entry .permalink:hover {
-  background: rgba(0, 0, 0, 0.2);
+.block_entry .permalink:hover svg {
+  fill: #FFFFFF;
 }
 .block_entry img {
   display: block;
@@ -792,7 +815,7 @@ article.section header.heading {
   opacity: 0;
 }
 .casestudy .container, .casestudy .page-wrap, .casestudy header.banner .inner, header.banner .casestudy .inner {
-  padding: 2.4em 45px;
+  padding: 2.4em 15px;
   position: relative;
 }
 .casestudy a.close {
@@ -865,6 +888,15 @@ header.banner {
   background-size: cover;
   border-bottom: 1px solid #FFFFFF;
   box-shadow: 0 3px 15px #FFFFFF;
+  -webkit-animation: pulse 1s infinite;
+          animation: pulse 1s infinite;
+}
+header.banner a {
+  color: #FFFFFF;
+}
+header.banner a:hover {
+  color: rgba(255, 255, 255, 0.9);
+  border-color: #FFFFFF;
 }
 header.banner .inner {
   padding-top: 280px;
@@ -877,5 +909,27 @@ header.banner .inner {
 @media only screen and (max-width: 50em) {
   header.banner .inner {
     padding-top: 2.4em;
+  }
+}
+
+@-webkit-keyframes pulse {
+  0%, 100% {
+    -webkit-filter: saturate(1);
+            filter: saturate(1);
+  }
+  50% {
+    -webkit-filter: saturate(1.4);
+            filter: saturate(1.4);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    -webkit-filter: saturate(1);
+            filter: saturate(1);
+  }
+  50% {
+    -webkit-filter: saturate(1.4);
+            filter: saturate(1.4);
   }
 }

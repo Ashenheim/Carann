@@ -10,7 +10,9 @@
 
 	<div class="inner">
 		<h1 class="title">
-			<span id="theTitle">{{ page.title }}</span>
+			<span id="theTitle">
+				<a href="{{ page.url }}">{{ page.title }}</a>
+			</span>
 		</h1>
 		<p>
 			<time>
@@ -24,7 +26,9 @@
 <div class="page-wrap">
 	
 	<article class="content">
-		<span id="theContent">{{ page.content }}</span>
+		<span id="theContent">
+			{{ page.content }}
+		</span>
 	</article>
 
 	{% include footer.html %}

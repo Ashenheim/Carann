@@ -10,6 +10,15 @@ header.banner
 		size: cover
 	border-bottom: 1px solid $white
 	box-shadow: 0 3px 15px $white
+	animation: pulse 1s infinite
+
+	
+	a
+		color: $white
+
+		&:hover
+			color: rgba( $white, .9 )
+			border-color: $white
 
 
 	.inner
@@ -22,3 +31,10 @@ header.banner
 
 		+below($bp-medium)
 			padding-top: $block-padding
+
+@keyframes pulse
+	0%, 100%
+		filter: saturate(1)
+
+	50%
+		filter: saturate(1.4)
