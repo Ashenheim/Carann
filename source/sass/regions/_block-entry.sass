@@ -31,6 +31,25 @@
 			font-size: .6em
 
 
+	.permalink
+		+position(absolute, null 0px 0px null)
+		z-index: 4
+		padding: 10px
+		text-align: center
+		transition: all $easing
+		display: none
+		opacity: 0
+
+		svg
+			width: 34px
+			height: 34px
+			display: block
+			fill: $white
+
+		&:hover
+			background: rgba( $black, .2 )
+
+
 	img
 		display: block
 		width: 100%
@@ -51,6 +70,10 @@
 
 		.block-inner
 			opacity: .2
+
+		.permalink
+			display: block
+			opacity: 1
 
 		img
 			transform: scale(1.2) rotate(-4deg)

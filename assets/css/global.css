@@ -252,7 +252,7 @@ td, th {
   clear: both;
 }
 
-.fullscreen .fullscreen_inner, header.banner .inner {
+.fullscreen .fullscreen_inner {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -683,6 +683,27 @@ footer {
   color: #FFFFFF;
   font-size: 0.6em;
 }
+.block_entry .permalink {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  z-index: 4;
+  padding: 20px;
+  text-align: center;
+  -webkit-transition: all 300ms ease-in-out;
+          transition: all 300ms ease-in-out;
+  display: none;
+  opacity: 0;
+}
+.block_entry .permalink svg {
+  width: 34px;
+  height: 34px;
+  display: block;
+  fill: #FFFFFF;
+}
+.block_entry .permalink:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
 .block_entry img {
   display: block;
   width: 100%;
@@ -706,6 +727,10 @@ footer {
 }
 .block_entry:hover .block-inner, .block.active .block-inner, .active.block--full .block-inner, .active.block--half .block-inner, .active.block--quarter .block-inner {
   opacity: 0.2;
+}
+.block_entry:hover .permalink, .block.active .permalink, .active.block--full .permalink, .active.block--half .permalink, .active.block--quarter .permalink {
+  display: block;
+  opacity: 1;
 }
 .block_entry:hover img, .block.active img, .active.block--full img, .active.block--half img, .active.block--quarter img {
   -webkit-transform: scale(1.2) rotate(-4deg);
@@ -834,9 +859,7 @@ article.section header.heading {
  * Independent page for Portfolio
  * ==================================== */
 header.banner {
-  margin-top: 4em;
   position: relative;
-  height: 280px;
   overflow: hidden;
   background: #000000 center center;
   background-size: cover;
@@ -844,6 +867,15 @@ header.banner {
   box-shadow: 0 3px 15px #FFFFFF;
 }
 header.banner .inner {
+  padding-top: 280px;
+  padding-bottom: 2.4em;
   color: #FFFFFF;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+  -webkit-transition: all 300ms ease-in-out;
+          transition: all 300ms ease-in-out;
+}
+@media only screen and (max-width: 50em) {
+  header.banner .inner {
+    padding-top: 2.4em;
+  }
 }

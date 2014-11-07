@@ -6,7 +6,7 @@ $(document).ready(function() {
 
 	var element  = $( '.casestudy' );
 
-	$( '.block-link' ).click(function(e) {
+	$( 'a.block-link' ).click(function(e) {
 
 		var savePosition = $(window).top;
 
@@ -15,7 +15,8 @@ $(document).ready(function() {
 		    documentPosY = $this.position().top,
 		    blockHeight  = $this.height(),
 		    blockWidth   = $this.width(),
-		    position     = $( documentPosY + blockHeight );
+		    position     = $( documentPosY + blockHeight ),
+		    baseURL      = $( this ).attr('href');
 
 
 		// Add .active class to current Block
@@ -37,11 +38,16 @@ $(document).ready(function() {
 			.css( { 'top' : documentPosY + blockHeight } )
 			.fadeIn(310)
 			.addClass('active');
-		element.find('.title')
-			.text( getTitle );
-		element.find('.content')
-			.empty()
-			.html( getContent );
+
+		console.log( baseURL );
+
+
+		// Ajax
+		$.get(baseURL, function(data) {
+			$( '#getTitle' ).empty().html( $(data).find('#theTitle'));
+			$( '#getContent' ).empty().html( $(data).find('#theContent'));
+		});
+
 
 		// Positions arrow
 		var arrowPos = (documentPosX + (blockWidth / 2) + -17.5);

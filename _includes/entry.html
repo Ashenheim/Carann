@@ -2,6 +2,12 @@
 	<div class="block_inner">
 
 		<div class="block_entry">
+
+		<a href="{{ entry.url }}" target="_blank" class="permalink">
+			<svg viewBox="0 0 100 100" class="icon shape-codepen">
+			  <use xlink:href="#icon-link"></use>
+			</svg>
+		</a href="{{ entry.url }}">
 				
 			{% if entry.text == true %}
 			{{ entry.content }}
@@ -26,20 +32,5 @@
 		</div>
 		
 	</div>
-	
-	<div class="block_data">
-		<div class="wrapper">
-			
-			<span class="title">{{ entry.title }}</span>
-
-			<span class="content">
-				{{ entry.content }}
-			</span>
-
-			<span class="color">#{{ entry.color }}</span>
-
-		</div>
-	</div>
-
 
 </div>

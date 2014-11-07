@@ -4,9 +4,7 @@
 
 
 header.banner
-	margin-top: 4em
 	position: relative
-	height: 280px
 	overflow: hidden
 	background: $black center center
 		size: cover
@@ -16,6 +14,11 @@ header.banner
 
 	.inner
 		@extend .container
-		@extend %vertical-align
+		padding-top: 280px
+		padding-bottom: $block-padding
 		color: $white
-		text-shadow: 0 1px 3px rgba( $black, .2 )
+		text-shadow: 0 1px 5px rgba( $black, .4 )
+		transition: all $easing
+
+		+below($bp-medium)
+			padding-top: $block-padding

@@ -3,7 +3,7 @@ title: Kha'zix
 date: 2014/10/02
 image: Khazix_1
 
-layout: default
+layout: portfolio
 
 size: half
 ratio: half
